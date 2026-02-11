@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 | Portfolio</title>
+    <style>
+        /* ===============================
+           GENERAL STYLING
+        =============================== */
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            margin: 0;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #8cff00;
+            text-decoration: underline;
+        }
+
+        /* ===============================
+           HEADER
+        =============================== */
+        .header {
+            text-align: center;
+            padding: 30px 20px 20px 20px;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: 3px;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        /* ===============================
+           NAVBAR
+        =============================== */
+        .menu {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .menu a {
+            margin: 0 15px;
+        }
+
+        /* ===============================
+           CONTENT
+        =============================== */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        h2 {
+            border-left: 4px solid #00ff00;
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: square;
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* ===============================
+           PROJECT TABLE
+        =============================== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th, td {
+            border: 1px solid #00ff00;
+            padding: 12px 10px;
+            text-align: left;
+            transition: background 0.3s ease;
+        }
+
+        th {
+            background-color: #002200;
+        }
+
+        tr:nth-child(even) {
+            background-color: #001100;
+        }
+
+        tr:hover {
+            background-color: #003300;
+        }
+
+        /* ===============================
+   FOOTER
+=============================== */
+.footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #00ff00;
+    font-size: 14px;
+    color: #00ff00;
+    background-color: #000000; /* optional: subtle footer background */
+}
+
+.footer a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+        /* ===============================
+           SPACING FOR SECTIONS
+        =============================== */
+        #education, #skills, #projects, #certifications, #contact {
+            margin-bottom: 30px;
+        }
+
+        /* ===============================
+           RESPONSIVE TABLE
+        =============================== */
+        @media screen and (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>MEDHAS</h1>
+        <p>Student | Code Explorer | Cyber Builder | Beginner Web Developer</p>
+    </div>
+
+    <div class="menu">
+        <a href="#about">About</a>
+        <a href="#education">Qualifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+
+        <h2 id="about">About Me</h2>
+        <p>
+            I am a beginner web developer learning the basics of the World Wide Web,
+            HTML, and CSS. I enjoy understanding how browsers and servers communicate
+            using HTTP and URLs.
+        </p>
+
+        <!-- Education -->
+        <div id="education">
+            <h2>Qualifications</h2>
+            <ul>
+                <li>Bachelor's Degree in IT (Ongoing)</li>
+                <li>Higher Secondary Education</li>
+            </ul>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C Programming</li>
+                <li>PYTHON Programming</li>
+                <li>Java</li>
+                <li>JavaFX</li>
+                <li>Blockchain Technology</li>
+            </ul>
+        </div>
+
+        <!-- Projects -->
+        <div id="projects">
+    <h2>Projects</h2>
+
+    <table>
+        <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Technology</th>
+        </tr>
+        <tr>
+            <td>Block Forge</td>
+            <td>Mini Blockchain Simulator</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Portfolio Website</td>
+            <td>Personal website using HTML & CSS</td>
+            <td>HTML, CSS</td>
+        </tr>
+        
+        <tr>
+            <td>FX CRYPTOFLOW</td>
+            <td>JavaFX Based Real-Time Cryptocurrency Portfolio Tracker</td>
+            <td>JavaFX</td>
+        </tr>
+        <tr>
+            <td>Hangman Game</td>
+            <td>Word guessing game</td>
+            <td>C</td>
+        </tr>
+    </table>
+</div>
+
+
+        <!-- Achievements
+        <div id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Completed multiple academic and personal programming projects</li>
+                <li>Built a blockchain simulator from scratch using C</li>
+            </ul>
+        </div> -->
+
+        <!-- Certifications -->
+        <div id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>C Programming Certification</li>
+                <li>PYTHON Programming Certification</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>Email: m4.portfolio@gmail.com</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 M4 | Email: <a href="mailto:m4.dev@proton.me">m4.dev@proton.me</a> | Made with 💚 by MEDHAS...</p>
+</div>
+
+
+</body>
+</html>
