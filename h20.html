@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M4 | Portfolio</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+body { background-color: #000; color: #00ff00; font-family: "Courier New", monospace; }
+
+/* Navbar */
+.navbar-nav .nav-link.active { font-weight: bold; color: #00ff00 !important; }
+.navbar { background-color: #000; border-bottom: 1px solid #00ff00; }
+
+/* Hero */
+.hero { height: 100vh; display: flex; align-items: center; color: #00ff00; position: relative; text-align:center; }
+.hero h1, .hero p { text-shadow: 0 0 4px #00ff00; }
+.hero .btn { background-color: #00ff00; color: #000; border: none; transition: all 0.3s ease; }
+.hero .btn:hover { background-color: #0f0; }
+
+/* Sections */
+section { padding: 80px 0; }
+.bg-black-green { background-color: #000; color: #00ff00; }
+.card, .accordion-body, .accordion-button { background-color: #001100; color: #00ff00; border: 1px solid #00ff00; }
+.accordion-button:not(.collapsed) { background-color: #002200; color: #00ff00; }
+
+/* Tables */
+.table-dark th, .table-dark td { background-color: #001100; color: #00ff00; border-color: #00ff00; }
+.table-striped > tbody > tr:nth-of-type(odd) { background-color: #000800; }
+.table-hover tbody tr:hover { background-color: #003300; }
+
+/* Progress Bars */
+.progress-bar { background-color: #00ff00 !important; }
+
+/* Badges */
+.badge { background-color: #00ff00; color: #000; }
+
+/* Buttons */
+.btn-green { background-color: #00ff00; color: #000; border: none; transition: all 0.3s ease; }
+.btn-green:hover { background-color: #0f0; }
+
+/* Forms */
+.form-control.bg-black-green { background-color: #001100; color: #00ff00; border: 1px solid #00ff00; }
+.form-control.bg-black-green:focus { background-color: #001100; color: #00ff00; border-color: #00ff00; box-shadow: none; }
+
+/* Lists */
+.list-group-item.bg-black-green { background-color: #001100; color: #00ff00; border: 1px solid #00ff00; }
+
+/* Footer */
+.footer { text-align: center; padding: 15px; border-top: 1px solid #00ff00; color: #00ff00; }
+
+/* M4 text */
+.m4-name { font-weight: bold; text-shadow: 0 0 5px #00ff00; }
+
+.text-muted {
+    color: #00ff00 !important; 
+    opacity: 0.8;
+    font-style: italic; 
+    letter-spacing: 0.5px;
+}
+
+.btn-cyber {
+    background-color: #000000;   /* Black background */
+    color: #00ff00 !important;   /* Cyber green text */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;         
+    border: 2px solid #00ff00;   /* Green border */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-cyber:hover {
+    background-color: #000000;   /* Black background stays */
+    color: #00ff00;              /* Text remains green */
+    box-shadow: 0 0 15px #00ff00; /* Subtle green glow on hover */
+    transform: scale(1.05);      
+}
+
+body {
+    background-color: #000000; /* Black background */
+    color: #00ff00;            /* Cyber green default text */
+    padding-top: 80px;         /* Space for fixed navbar */
+    margin: 0;
+    font-family: 'Courier New', monospace;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 80px 20px 20px 20px; /* Top padding to clear navbar */
+    border-bottom: 2px solid #00ff00;
+    background-color: #000000;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 60px;
+    color: #00ff00;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.header p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #00ff00;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Hero Section Styling */
+.hero {
+    min-height: 70vh;           /* Hero fills most of viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    position: relative;
+    text-align: center;
+    color: #00ff00;
+}
+
+/* Hero Buttons */
+.btn-cyber {
+    background-color: #000000;
+    color: #00ff00 !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    border: 2px solid #00ff00;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.btn-cyber:hover {
+    box-shadow: 0 0 15px #00ff00;
+    transform: scale(1.05);
+}
+
+/* Carousel Text */
+.hero .carousel-inner h1,
+.hero .carousel-inner p {
+    color: #00ff00; /* Ensure cyber green text */
+}
+</style>
+</head>
+<body>
+
+
+<div class="header">
+        <h1>MEDHAS</h1>
+        <p>Student | Code Explorer | Cyber Builder | Beginner Web Developer</p>
+    </div>
+    
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand m4-name" href="#">MEDHAS PORTFOLIO</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#qualifications">Qualifications</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<!-- Home Section -->
+<section id="home" class="hero">
+<div class="overlay"></div>
+<div class="container content">
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner text-center">
+<div class="carousel-item active">
+<h1>Welcome to My Portfolio</h1>
+<p class="lead">Showcasing my profile, skills, and achievements</p>
+<a href="#contact" class="btn btn-green btn-lg">Contact Me</a>
+</div>
+<div class="carousel-item">
+<h1>Building Modern Websites</h1>
+<p class="lead">Responsive, Interactive, and User-Friendly</p>
+<a href="#about" class="btn btn-green btn-lg">Learn More</a>
+</div>
+<div class="carousel-item">
+<h1>Passionate About Development</h1>
+<p class="lead">Continuous Learning & Growth</p>
+<a href="#skills" class="btn btn-green btn-lg">View Skills</a>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="bg-black-green">
+<div class="container">
+<h2 class="text-center mb-5">About Me</h2>
+<div class="row justify-content-center">
+<div class="col-md-4 text-center">
+
+<h4 class="m4-name">MEDHAS</h4>
+<p class="text-muted">Student | Beginner Web Developer | Cyber Enthusiast</p>
+</div>
+<div class="col-md-6">
+<div class="card shadow p-3">
+<div class="card-body">
+<p>I’m MEDHAS — a code explorer and cyber enthusiast. From simulating blockchains to tracking cryptocurrencies in real-time, I build projects that blend logic, creativity, and interactivity. Constantly learning, always coding.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Qualifications -->
+<section id="qualifications" class="bg-black-green">
+<div class="container">
+<h2 class="text-center mb-5">Qualifications</h2>
+<table class="table table-dark table-striped table-hover">
+<thead>
+<tr><th>Degree</th><th>Institute</th><th>Year</th></tr>
+</thead>
+<tbody>
+<tr><td>B.E in IT</td><td>Vasavi College of Engineering</td><td>2026 (Ongoing)</td></tr>
+<tr><td>Higher Secondary Education</td><td>Ignite junior College</td><td>2022</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-black-green">
+<div class="container">
+<h2 class="text-center mb-5">Skills</h2>
+<div class="row">
+<div class="col-md-6">
+<h5>Programming Languages</h5>
+<div class="accordion" id="skillsAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingOne">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+Languages & Proficiency
+</button>
+</h2>
+<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#skillsAccordion">
+<div class="accordion-body">
+<p>HTML <span class="float-end">95%</span></p>
+<div class="progress mb-2"><div class="progress-bar" style="width:95%"></div></div>
+<p>CSS <span class="float-end">90%</span></p>
+<div class="progress mb-2"><div class="progress-bar" style="width:90%"></div></div>
+<p>Python <span class="float-end">80%</span></p>
+<div class="progress mb-2"><div class="progress-bar" style="width:80%"></div></div>
+<p>Java <span class="float-end">85%</span></p>
+<div class="progress mb-2"><div class="progress-bar" style="width:85%"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<h5>Tools & Frameworks</h5>
+<ul class="list-group">
+<li class="list-group-item bg-black-green"><i class="bi bi-check-circle-fill"></i> Bootstrap 5</li>
+<li class="list-group-item bg-black-green"><i class="bi bi-check-circle-fill"></i> Git & GitHub</li>
+<li class="list-group-item bg-black-green"><i class="bi bi-check-circle-fill"></i> REST APIs</li>
+<li class="list-group-item bg-black-green"><i class="bi bi-check-circle-fill"></i> Database Management</li>
+<li class="list-group-item bg-black-green"><i class="bi bi-check-circle-fill"></i> JavaFX Applications</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="bg-black-green">
+<div class="container">
+<h2 class="text-center mb-5">Projects</h2>
+<table class="table table-dark table-striped table-hover">
+<thead><tr><th>Project</th><th>Description</th><th>Technology</th></tr></thead>
+<tbody>
+<tr><td>Block Forge</td><td>Mini Blockchain Simulator</td><td>C</td></tr>
+<tr><td>Portfolio Website</td><td>Personal website using HTML & CSS</td><td>HTML, CSS</td></tr>
+<tr><td>FX CRYPTOFLOW</td><td>JavaFX Real-Time Crypto Portfolio Tracker</td><td>JavaFX</td></tr>
+<tr><td>Hangman Game</td><td>Word guessing game</td><td>C</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="bg-black-green">
+<div class="container">
+<h2 class="text-center mb-5">Certifications</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Introduction of Networks</h5>
+<span class="badge mb-2">Completed</span>
+<p class="card-text">Certified from Cisco Networking Academy.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Python Programming</h5>
+<span class="badge mb-2">Completed</span>
+<p class="card-text">Advanced Python Certification.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-black-green">
+<div class="container">
+<h2 class="text-center mb-5">Contact Me</h2>
+<div class="row justify-content-center">
+<div class="col-md-8">
+<form id="contactForm" novalidate>
+<div class="mb-3">
+<label for="name" class="form-label">Full Name *</label>
+<input type="text" class="form-control bg-black-green" id="name" required>
+<div class="invalid-feedback">Please enter your name.</div>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Email *</label>
+<input type="email" class="form-control bg-black-green" id="email" required>
+<div class="invalid-feedback">Please enter a valid email.</div>
+</div>
+<div class="mb-3">
+<label for="phone" class="form-label">Mobile Number *</label>
+<input type="text" class="form-control bg-black-green" id="phone" required pattern="\d{10}">
+<div class="invalid-feedback">Enter a 10-digit mobile number.</div>
+</div>
+<div class="mb-3">
+<label for="message" class="form-label">Message *</label>
+<textarea class="form-control bg-black-green" id="message" rows="5" required></textarea>
+<div class="invalid-feedback">Please write your message.</div>
+</div>
+<button type="submit" class="btn btn-green">Send Message</button>
+<div class="mt-3" id="formAlert"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<p>© 2026 M4 | Email: m4.dev@proton.me | Made with 💚 by MEDHAS...</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+let current = '';
+sections.forEach(section => { const sectionTop = section.offsetTop - 100; if (pageYOffset >= sectionTop) current = section.getAttribute('id'); });
+navLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === '#' + current) link.classList.add('active'); });
+
+// Contact form validation
+const form = document.getElementById('contactForm');
+const alertDiv = document.getElementById('formAlert');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (!form.checkValidity()) { form.classList.add('was-validated'); } 
+    else { alertDiv.innerHTML = '<div class="alert alert-success text-dark bg-green">Message sent successfully!</div>'; form.reset(); form.classList.remove('was-validated'); }
+});
+});
+</script>
+
+</body>
+</html>
